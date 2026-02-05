@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Naidis_IKTpv_1TAR": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\opilane\\source\\repos\\Naidis_IKTpv_1TAR\\Naidis_IKTpv_1TAR\\Class1.cs"
+    }
+  }
+}

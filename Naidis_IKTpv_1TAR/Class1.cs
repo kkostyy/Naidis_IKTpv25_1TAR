@@ -46,7 +46,9 @@ namespace Naidis_IKTpv25_1TAR
             tekst = Naidis_functsioon.Kuu_nimetus(juhuslik_arv);
             Console.WriteLine(tekst);
             //juku ja kinno
-            Console.Write(_2OSAFunktsioon.Juku()
+            Console.Write(_2OSAFunktsioon.Juku());
+            Console.Write(_2OSAFunktsioon.Juku(nimi));
+            Console.Write(_2OSAFunktsioon.Juku("Python"));
         }
     }
 }

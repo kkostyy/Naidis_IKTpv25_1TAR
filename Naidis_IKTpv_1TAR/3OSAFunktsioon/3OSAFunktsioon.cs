@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Задача 1 – Квадраты чисел
-class Zadacha1
+// Ülesanne 1
+class ArvuTöötlus
 {
     static void Main()
     {
@@ -16,8 +16,8 @@ class Zadacha1
     }
 }
 
-// Задача 2 – Сумма, среднее, произведение 5 чисел
-class Zadacha2
+// Ülesanne 2
+class ArvuAnalüüs
 {
     static void Main()
     {
@@ -35,8 +35,8 @@ class Zadacha2
     }
 }
 
-// Задача 3 – Имена и возрасты
-class Zadacha3
+// Ülesanne 3
+class NimedVanused
 {
     static void Main()
     {
@@ -66,8 +66,8 @@ class Zadacha3
     }
 }
 
-// Задача 4 – "Купи слона!"
-class Zadacha4
+// Ülesanne 4
+class ElevantMäng
 {
     static void Main()
     {
@@ -81,8 +81,8 @@ class Zadacha4
     }
 }
 
-// Задача 5 – Угадай число
-class Zadacha5
+// Ülesanne 5
+class ArvamisMäng
 {
     static void Main()
     {
@@ -104,8 +104,8 @@ class Zadacha5
     }
 }
 
-// Задача 6 – Наибольшее четырёхзначное число из цифр
-class Zadacha6
+// Ülesanne 6
+class NeliarSuurim
 {
     static void Main()
     {
@@ -123,8 +123,8 @@ class Zadacha6
     }
 }
 
-// Задача 7 – Таблица умножения
-class Zadacha7
+// Ülesanne 7
+class Korrutustabel
 {
     static void Main()
     {
@@ -142,8 +142,8 @@ class Zadacha7
     }
 }
 
-// Задача 8 – Ученики
-class Zadacha8
+// Ülesanne 8
+class Õpilased
 {
     static void Main()
     {
@@ -157,8 +157,8 @@ class Zadacha8
     }
 }
 
-// Задача 9 – Квадраты массива
-class Zadacha9
+// Ülesanne 9
+class ArvudeRuudud
 {
     static void Main()
     {
@@ -168,8 +168,8 @@ class Zadacha9
     }
 }
 
-// Задача 10 – Положительные и отрицательные
-class Zadacha10
+// Ülesanne 10
+class PosNeg
 {
     static void Main()
     {
@@ -189,8 +189,8 @@ class Zadacha10
     }
 }
 
-// Задача 11 – Больше среднего
-class Zadacha11
+// Ülesanne 11
+class KeskmisestSuuremad
 {
     static void Main()
     {
@@ -213,8 +213,8 @@ class Zadacha11
     }
 }
 
-// Задача 12 – Наибольшее число
-class Zadacha12
+// Ülesanne 12
+class SuurimArv
 {
     static void Main()
     {
@@ -228,8 +228,8 @@ class Zadacha12
     }
 }
 
-// Задача 13 – Чётные и нечётные
-class Zadacha13
+// Ülesanne 13
+class PaarLoendus
 {
     static void Main()
     {

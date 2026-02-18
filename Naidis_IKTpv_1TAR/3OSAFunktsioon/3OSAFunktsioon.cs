@@ -1,30 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 
-// Ülesanne 1
-class ArvuTöötlus
+class Ülesanded
 {
-    static void Main()
+    public static void ArvuTöötlus()
     {
+        Console.Write("Minimaalne väärtus: ");
+        int min = int.Parse(Console.ReadLine());
+        Console.Write("Maksimaalne väärtus: ");
+        int max = int.Parse(Console.ReadLine());
+
         Random rnd = new Random();
-        int N = rnd.Next(1, 10);
-        int M = rnd.Next(1, 10);
+        int N = rnd.Next(min, max + 1);
+        int M = rnd.Next(min, max + 1);
         if (N > M) { int t = N; N = M; M = t; }
 
         for (int i = N; i <= M; i++)
             Console.WriteLine(i + " * " + i + " = " + (i * i));
     }
-}
 
-// Ülesanne 2
-class ArvuAnalüüs
-{
-    static void Main()
+    public static void ArvuAnalüüs()
     {
         double summa = 0, korrutis = 1;
         for (int i = 0; i < 5; i++)
         {
-            Console.Write("Sisesta arv: ");
+            Console.Write("Sisesta " + (i + 1) + ". arv: ");
             double arv = double.Parse(Console.ReadLine());
             summa += arv;
             korrutis *= arv;
@@ -33,21 +32,17 @@ class ArvuAnalüüs
         Console.WriteLine("Keskmine: " + (summa / 5));
         Console.WriteLine("Korrutis: " + korrutis);
     }
-}
 
-// Ülesanne 3
-class NimedVanused
-{
-    static void Main()
+    public static void NimedVanused()
     {
         string[] nimed = new string[5];
         int[] vanused = new int[5];
 
         for (int i = 0; i < 5; i++)
         {
-            Console.Write("Nimi: ");
+            Console.Write((i + 1) + ". nimi: ");
             nimed[i] = Console.ReadLine();
-            Console.Write("Vanus: ");
+            Console.Write((i + 1) + ". vanus: ");
             vanused[i] = int.Parse(Console.ReadLine());
         }
 
@@ -64,12 +59,8 @@ class NimedVanused
         Console.WriteLine("Vanim: " + nimed[vanimIdx] + " (" + vanused[vanimIdx] + ")");
         Console.WriteLine("Noorim: " + nimed[noorimIdx] + " (" + vanused[noorimIdx] + ")");
     }
-}
 
-// Ülesanne 4
-class ElevantMäng
-{
-    static void Main()
+    public static void ElevantMäng()
     {
         string vastus = "";
         while (vastus != "JAH")
@@ -77,62 +68,58 @@ class ElevantMäng
             Console.WriteLine("Kas soovid elevanti osta? (JAH/EI)");
             vastus = Console.ReadLine();
         }
-        Console.WriteLine("Tubli!");
+        Console.WriteLine("Tubli! Elevant on sinu oma!");
     }
-}
 
-// Ülesanne 5
-class ArvamisMäng
-{
-    static void Main()
+    public static void ArvamisMäng()
     {
-        Random rnd = new Random();
-        int salajane = rnd.Next(1, 101);
-        bool arvati = false;
-
-        for (int i = 1; i <= 5; i++)
+        string mängib = "jah";
+        while (mängib == "jah")
         {
-            Console.Write("Arva arv (1-100): ");
-            int arv = int.Parse(Console.ReadLine());
+            Random rnd = new Random();
+            int salajane = rnd.Next(1, 101);
+            bool arvati = false;
 
-            if (arv == salajane) { Console.WriteLine("Õige!"); arvati = true; break; }
-            else if (arv > salajane) Console.WriteLine("Liiga suur!");
-            else Console.WriteLine("Liiga väike!");
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.Write("Katse " + i + "/5 – arva arv [1-100]: ");
+                int arv = int.Parse(Console.ReadLine());
+
+                if (arv == salajane) { Console.WriteLine("Õige!"); arvati = true; break; }
+                else if (arv > salajane) Console.WriteLine("Liiga suur!");
+                else Console.WriteLine("Liiga väike!");
+            }
+
+            if (!arvati) Console.WriteLine("Kaotasid! Arv oli " + salajane);
+
+            Console.Write("Kas soovid uuesti mängida? (jah/ei): ");
+            mängib = Console.ReadLine().ToLower();
         }
-
-        if (!arvati) Console.WriteLine("Kaotasid! Arv oli " + salajane);
     }
-}
 
-// Ülesanne 6
-class NeliarSuurim
-{
-    static void Main()
+    public static void NeliarSuurim()
     {
         int[] arvud = new int[4];
         for (int i = 0; i < 4; i++)
         {
-            Console.Write("Sisesta number (0-9): ");
+            Console.Write("Sisesta " + (i + 1) + ". number (0-9): ");
             arvud[i] = int.Parse(Console.ReadLine());
         }
 
         Array.Sort(arvud);
         Array.Reverse(arvud);
         int tulemus = arvud[0] * 1000 + arvud[1] * 100 + arvud[2] * 10 + arvud[3];
-        Console.WriteLine("Suurim arv: " + tulemus);
+        Console.WriteLine("Suurim nelikohaline arv: " + tulemus);
     }
-}
 
-// Ülesanne 7
-class Korrutustabel
-{
-    static void Main()
+    public static void Korrutustabel()
     {
-        Console.Write("Ridu: ");
+        Console.Write("Ridade arv: ");
         int read = int.Parse(Console.ReadLine());
-        Console.Write("Veerge: ");
+        Console.Write("Veergude arv: ");
         int veerud = int.Parse(Console.ReadLine());
 
+        Console.WriteLine();
         for (int r = 1; r <= read; r++)
         {
             for (int v = 1; v <= veerud; v++)
@@ -140,38 +127,35 @@ class Korrutustabel
             Console.WriteLine();
         }
     }
-}
 
-// Ülesanne 8
-class Õpilased
-{
-    static void Main()
+    public static void Õpilased()
     {
         string[] nimed = { "Anna", "Peeter", "Mari", "Jaan", "Aino",
                            "Karl", "Liis", "Tiit", "Kalle", "Eevi" };
         nimed[2] = "Kati";
         nimed[5] = "Mati";
 
+        Console.WriteLine("A-ga algavad:");
         foreach (string nimi in nimed)
-            Console.WriteLine(nimi);
-    }
-}
+            if (nimi.StartsWith("A")) Console.WriteLine("  Tere, " + nimi + "!");
 
-// Ülesanne 9
-class ArvudeRuudud
-{
-    static void Main()
+        Console.WriteLine("\nKõik nimed:");
+        for (int i = 0; i < nimed.Length; i++)
+            Console.WriteLine("  [" + i + "] " + nimed[i]);
+
+        Console.WriteLine("\nVäikeste tähtedega:");
+        foreach (string nimi in nimed)
+            Console.WriteLine("  " + nimi.ToLower());
+    }
+
+    public static void ArvudeRuudud()
     {
         int[] arvud = { 2, 4, 6, 8, 10, 12 };
         foreach (int a in arvud)
             Console.WriteLine(a + " * " + a + " = " + (a * a));
     }
-}
 
-// Ülesanne 10
-class PosNeg
-{
-    static void Main()
+    public static void PosNeg()
     {
         int[] arvud = { 5, -3, 0, 8, -1, 4, -7, 2, 0, -5, 6, 9 };
         int pos = 0, neg = 0, null_ = 0;
@@ -187,12 +171,8 @@ class PosNeg
         Console.WriteLine("Negatiivseid: " + neg);
         Console.WriteLine("Nulle: " + null_);
     }
-}
 
-// Ülesanne 11
-class KeskmisestSuuremad
-{
-    static void Main()
+    public static void KeskmisestSuuremad()
     {
         Random rnd = new Random();
         int[] arvud = new int[15];
@@ -205,33 +185,35 @@ class KeskmisestSuuremad
         }
 
         double keskmine = summa / 15;
+        Console.WriteLine("Arvud: " + string.Join(", ", arvud));
         Console.WriteLine("Keskmine: " + keskmine);
-
+        Console.Write("Keskmisest suuremad: ");
         foreach (int a in arvud)
             if (a > keskmine) Console.Write(a + " ");
         Console.WriteLine();
     }
-}
 
-// Ülesanne 12
-class SuurimArv
-{
-    static void Main()
+    public static void SuurimArv()
     {
         int[] numbrid = { 12, 56, 78, 2, 90, 43, 88, 67 };
         int suurim = numbrid[0];
+        int suurimIdx = 0;
 
-        foreach (int a in numbrid)
-            if (a > suurim) suurim = a;
+        for (int i = 1; i < numbrid.Length; i++)
+        {
+            if (numbrid[i] > suurim)
+            {
+                suurim = numbrid[i];
+                suurimIdx = i;
+            }
+        }
 
-        Console.WriteLine("Suurim: " + suurim);
+        Console.WriteLine("Arvud: " + string.Join(", ", numbrid));
+        Console.WriteLine("Suurim arv: " + suurim);
+        Console.WriteLine("Selle indeks: " + suurimIdx);
     }
-}
 
-// Ülesanne 13
-class PaarLoendus
-{
-    static void Main()
+    public static void PaarLoendus()
     {
         Random rnd = new Random();
         int[] arvud = new int[20];
@@ -245,7 +227,9 @@ class PaarLoendus
             else { paarituSumma += arvud[i]; paarituArv++; }
         }
 
+        Console.WriteLine("Arvud: " + string.Join(", ", arvud));
         Console.WriteLine("Paarisarvude summa: " + paarSumma);
-        Console.WriteLine("Paaritute keskmine: " + (paarituArv > 0 ? (double)paarituSumma / paarituArv : 0));
+        if (paarituArv > 0)
+            Console.WriteLine("Paaritute keskmine: " + (double)paarituSumma / paarituArv);
     }
 }

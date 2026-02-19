@@ -8,8 +8,4 @@
     <StartupObject></StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="1OSAFunktsioon\" />
-  </ItemGroup>
-
 </Project>

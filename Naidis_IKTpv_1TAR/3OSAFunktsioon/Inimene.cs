@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Naidis_IKTpv_1TAR._3OSAFunktsioon
 {
-    internal class Inimene
+    // Klass Inimene – ülesanne 3
+    // Sisaldab nime ja vanust
+    public class Inimene
     {
         public string Nimi;
         public int Vanus;
@@ -13,6 +13,12 @@ namespace Naidis_IKTpv_1TAR._3OSAFunktsioon
         {
             Nimi = nimi;
             Vanus = vanus;
+        }
+
+        public void Tervita()
+        {
+            Console.WriteLine("Tere, minu nimi on " + Nimi
+                + " ja ma olen " + Vanus + " aastat vana.");
         }
     }
 }

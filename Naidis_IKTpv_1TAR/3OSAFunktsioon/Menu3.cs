@@ -197,7 +197,7 @@ namespace Naidis_csharp
                 else if (valik == "8")
                 {
 
-                    Naidis_funktsioon.MuudaElement(arvud);
+                    Naidis_IKTpv_1TAR.MuudaElement(arvud);
 
 
                 }

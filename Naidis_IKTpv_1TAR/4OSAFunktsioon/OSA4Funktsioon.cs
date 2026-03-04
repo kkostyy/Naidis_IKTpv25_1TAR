@@ -26,31 +26,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 Console.WriteLine("Mingi viga failiga");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
         // Teooria 2 – Faili lugemine StreamReader
         public static void FailiLugemine()
         {
@@ -92,9 +68,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
             }
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Teooria 4 – Listi muutmine ja kuvamine
-        // ─────────────────────────────────────────────────────────────
         public static void ListiMuutmine()
         {
             LooKuudTxt();
@@ -124,9 +98,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 Console.WriteLine(kuu);
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Teooria 5 – Otsing listist
-        // ─────────────────────────────────────────────────────────────
         public static void OtsigListist()
         {
             LooKuudTxt();
@@ -152,9 +124,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 Console.WriteLine("Sellist kuud pole.");
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Teooria 6 – Listi salvestamine faili
-        // ─────────────────────────────────────────────────────────────
         public static void ListiSalvestamine()
         {
             List<string> kuude_list = new List<string>()
@@ -174,9 +144,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
             }
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Ülesanne 1 – Lemmiktoidu salvestamine faili
-        // ─────────────────────────────────────────────────────────────
         public static void LemmiktoiduSalvestamine()
         {
             try
@@ -194,9 +162,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
             }
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Ülesanne 2 – Menüü kuvamine StreamReader abil
-        // ─────────────────────────────────────────────────────────────
         public static void MenüüKuvamine()
         {
             try
@@ -213,9 +179,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
             }
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Ülesanne 3 – Koostisosade muutmine (kasutab Retsept klassi)
-        // ─────────────────────────────────────────────────────────────
         public static void KoostisosadeMuutmine()
         {
             LooKoostisosadTxt();
@@ -237,9 +201,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
             retsept.Kuva();
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Ülesanne 4 – Külmkapi kontroll (kasutab Retsept.OnOlemas)
-        // ─────────────────────────────────────────────────────────────
         public static void KülmkapiKontroll()
         {
             LooKoostisosadTxt();
@@ -256,9 +218,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 Console.WriteLine("Seda koostisosa meil retseptis ei ole.");
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Ülesanne 5 – Uuendatud nimekirja salvestamine (kasutab Retsept.Salvesta)
-        // ─────────────────────────────────────────────────────────────
         public static void UuendatudSalvestamine()
         {
             LooKoostisosadTxt();
@@ -274,9 +234,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
             retsept.Salvesta("Koostisosad.txt");
         }
 
-        // ─────────────────────────────────────────────────────────────
         // Abimeetodid – loovad failid kui neid pole
-        // ─────────────────────────────────────────────────────────────
         static void LooKuudTxt()
         {
             if (!File.Exists(KuudPath))
@@ -303,3 +261,4 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
         }
     }
 }
+

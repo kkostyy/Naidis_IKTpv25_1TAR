@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Collections.Generic;
+using System.IO;
 using Naidis_IKTpv_1TAR._1OSAFunktsioon;
 using Naidis_IKTpv_1TAR._2OSAFunktsioon;
 using Naidis_IKTpv_1TAR._3OSAFunktsioon;
+using Naidis_IKTpv_1TAR._4OSAFunktsioon;
 
 namespace Naidis_IKTpv_1TAR
 {
@@ -56,6 +58,18 @@ namespace Naidis_IKTpv_1TAR
                 Console.WriteLine("35. Keskmisest suuremad");
                 Console.WriteLine("36. Suurima arvu otsing + indeks");
                 Console.WriteLine("37. Paari- ja paaritud (List 20 arvu)");
+                Console.WriteLine("--- 4. OSA ---");
+                Console.WriteLine("38. Faili kirjutamine (StreamWriter)");
+                Console.WriteLine("39. Faili lugemine (StreamReader)");
+                Console.WriteLine("40. Ridade lugemine listi (ReadAllLines)");
+                Console.WriteLine("41. Listi muutmine ja kuvamine");
+                Console.WriteLine("42. Otsing listist (Contains)");
+                Console.WriteLine("43. Listi salvestamine faili (WriteAllLines)");
+                Console.WriteLine("44. Ülesanne 1: Lemmiktoidu salvestamine");
+                Console.WriteLine("45. Ülesanne 2: Menüü kuvamine");
+                Console.WriteLine("46. Ülesanne 3: Koostisosade muutmine");
+                Console.WriteLine("47. Ülesanne 4: Külmkapi kontroll");
+                Console.WriteLine("48. Ülesanne 5: Salvestamine tagasi faili");
                 Console.WriteLine("0. exit");
 
                 string valik = Console.ReadLine();
@@ -250,6 +264,50 @@ namespace Naidis_IKTpv_1TAR
                 {
                     OSA3Funktsioon.PaaridJaPaaritud();
                 }
+                else if (valik == "38")
+                {
+                    OSA4Funktsioon.FailiKirjutamine();
+                }
+                else if (valik == "39")
+                {
+                    OSA4Funktsioon.FailiLugemine();
+                }
+                else if (valik == "40")
+                {
+                    OSA4Funktsioon.ReadAllLinesNaide();
+                }
+                else if (valik == "41")
+                {
+                    OSA4Funktsioon.ListiMuutmine();
+                }
+                else if (valik == "42")
+                {
+                    OSA4Funktsioon.OtsigListist();
+                }
+                else if (valik == "43")
+                {
+                    OSA4Funktsioon.ListiSalvestamine();
+                }
+                else if (valik == "44")
+                {
+                    OSA4Funktsioon.LemmiktoiduSalvestamine();
+                }
+                else if (valik == "45")
+                {
+                    OSA4Funktsioon.MenüüKuvamine();
+                }
+                else if (valik == "46")
+                {
+                    OSA4Funktsioon.KoostisosadeMuutmine();
+                }
+                else if (valik == "47")
+                {
+                    OSA4Funktsioon.KülmkapiKontroll();
+                }
+                else if (valik == "48")
+                {
+                    OSA4Funktsioon.UuendatudSalvestamine();
+                }
                 else if (valik == "0")
                 {
                     Console.WriteLine("Nägemist!");
@@ -257,7 +315,7 @@ namespace Naidis_IKTpv_1TAR
                 }
                 else
                 {
-                    Console.WriteLine("Palun vali 0-37");
+                    Console.WriteLine("Palun vali 0-48");
                 }
             }
         }

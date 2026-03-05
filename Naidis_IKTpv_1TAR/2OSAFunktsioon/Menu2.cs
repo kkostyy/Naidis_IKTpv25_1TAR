@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace Naidis_IKTpv_1TAR._2OSAFunktsioon
@@ -24,7 +24,8 @@ namespace Naidis_IKTpv_1TAR._2OSAFunktsioon
                 Console.WriteLine("9. Pikkuse hindamine");
                 Console.WriteLine("10. Pikkus ja sugu");
                 Console.WriteLine("11. Pood (piim, sai, leib)");
-                Console.WriteLine("12. exit");
+                Console.WriteLine("0. exit");
+                Console.Write("Vali tegevus: ");
 
                 string valik = Console.ReadLine();
 
@@ -72,14 +73,14 @@ namespace Naidis_IKTpv_1TAR._2OSAFunktsioon
                 {
                     OSA2Funktsioon.Pood();
                 }
-                else if (valik == "12")
+                else if (valik == "0")
                 {
                     Console.WriteLine("Nägemist!");
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Palun vali 1-12");
+                    Console.WriteLine("Palun vali 1-11");
                 }
             }
         }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
@@ -25,6 +25,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 Console.WriteLine("10. Ülesanne 4: Külmkapi kontroll");
                 Console.WriteLine("11. Ülesanne 5: Salvestamine tagasi faili");
                 Console.WriteLine("0. exit");
+                Console.Write("Vali tegevus: ");
 
                 string valik = Console.ReadLine();
 

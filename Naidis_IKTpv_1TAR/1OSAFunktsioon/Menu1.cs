@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace Naidis_IKTpv_1TAR._1OSAFunktsioon
@@ -20,7 +20,8 @@ namespace Naidis_IKTpv_1TAR._1OSAFunktsioon
                 Console.WriteLine("5. Lahutamine (kasutab Arvutaja klassi)");
                 Console.WriteLine("6. Jagamine (kasutab Arvutaja klassi)");
                 Console.WriteLine("7. Isiku loomine (kasutab Isik klassi)");
-                Console.WriteLine("8. exit");
+                Console.WriteLine("0. exit");
+                Console.Write("Vali tegevus: ");
 
                 string valik = Console.ReadLine();
 
@@ -52,14 +53,14 @@ namespace Naidis_IKTpv_1TAR._1OSAFunktsioon
                 {
                     OSA1Funktsioon.IsikuLoomine();
                 }
-                else if (valik == "8")
+                else if (valik == "0")
                 {
                     Console.WriteLine("Nägemist!");
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Palun vali 1-8");
+                    Console.WriteLine("Palun vali 1-7");
                 }
             }
         }

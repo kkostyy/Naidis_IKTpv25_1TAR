@@ -1,4 +1,4 @@
-﻿using Naidis_csharp;
+﻿    
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,7 +35,8 @@ namespace Naidis_IKTpv_1TAR._3OSAFunktsioon
                 Console.WriteLine("17. Ülesanne 11: Keskmisest suuremad (15 juhuslikku)");
                 Console.WriteLine("18. Ülesanne 12: Suurima arvu otsing + indeks");
                 Console.WriteLine("19. Ülesanne 13: Paari- ja paaritud (List 20 arvu)");
-                Console.WriteLine("20. exit");
+                Console.WriteLine("0. exit");
+                Console.Write("Vali tegevus: ");
 
                 string valik = Console.ReadLine();
 
@@ -175,14 +176,14 @@ namespace Naidis_IKTpv_1TAR._3OSAFunktsioon
                     // Ülesanne 13
                     OSA3Funktsioon.PaaridJaPaaritud();
                 }
-                else if (valik == "20")
+                else if (valik == "0")
                 {
                     Console.WriteLine("Nägemist!");
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Palun vali 1-20");
+                    Console.WriteLine("Palun vali 1-19");
                 }
             }
         }

@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 
 namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
@@ -257,6 +258,85 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                     "Oliiviõli", "Küüslauk", "Tomat", "Ketsup", "Basiilik", "Parmesan", "Pasta"
                 });
                 Console.WriteLine("Loodud Koostisosad.txt.");
+            }
+        }
+
+        // Ülesanne 6* – Itaalia restorani menüü (Failist Tuple'isse)
+        public static void RestoranMenüü()
+        {
+            LooMenuTxt();
+
+            string path = FailiAbi.Tee("Menuu.txt");
+
+            List<Tuple<string, string, double>> menyyList = new List<Tuple<string, string, double>>();
+
+            try
+            {
+                string[] read = File.ReadAllLines(path);
+
+                foreach (string rida in read)
+                {
+                    string[] osad = rida.Split(';');
+
+                    if (osad.Length == 3)
+                    {
+                        string roaNimi = osad[0].Trim();
+                        string koostisosad = osad[1].Trim();
+                        double hind = double.Parse(osad[2].Trim(), CultureInfo.InvariantCulture);
+
+                        menyyList.Add(Tuple.Create(roaNimi, koostisosad, hind));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Vale formaat real: " + rida);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Viga faili lugemisel!");
+                return;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("    ITAALIA RESTORAN");
+            Console.WriteLine("    Tere tulemast meie restorani!");
+            Console.WriteLine();
+
+            foreach (Tuple<string, string, double> roog in menyyList)
+            {
+                string roaNimi = roog.Item1;
+                string koostisosad = roog.Item2;
+                double hind = roog.Item3;
+
+                Console.WriteLine("  " + roaNimi.PadRight(33) + hind.ToString("F2") + " €");
+                Console.WriteLine("    " + koostisosad);
+                Console.WriteLine("  " + new string('-', 45));
+            }
+
+            ConsoleKeyInfo key = new ConsoleKeyInfo();
+            do
+            {
+                Console.WriteLine("Vajuta Backspace");
+                key = Console.ReadKey();
+            }
+            while (key.Key != ConsoleKey.Backspace);
+
+            Console.WriteLine("\nMenüü suletud.");
+        }
+
+        static void LooMenuTxt()
+        {
+            string path = FailiAbi.Tee("Menuu.txt");
+            if (!File.Exists(path))
+            {
+                File.WriteAllLines(path, new string[]
+                {
+                    "Margherita pitsa;San Marzano tomatid, värske mozzarella, basiilik;8.50",
+                    "Pasta Carbonara;Spagetid, guanciale, pecorino juust, muna;12.00",
+                    "Tiramisu;Mascarpone, espresso, savoiardi küpsised;6.50"
+                });
+                Console.WriteLine("Loodud Menuu.txt.");
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace Naidis_IKTpv_1TAR._4OSAFunktsioon

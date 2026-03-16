@@ -24,6 +24,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 Console.WriteLine("9. Ülesanne 3: Koostisosade muutmine");
                 Console.WriteLine("10. Ülesanne 4: Külmkapi kontroll");
                 Console.WriteLine("11. Ülesanne 5: Salvestamine tagasi faili");
+                Console.WriteLine("12. Ülesanne 6: Itaalia restorani menüü (Tuple + Split)");
                 Console.WriteLine("0. exit");
                 Console.Write("Vali tegevus: ");
 
@@ -73,6 +74,10 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 {
                     OSA4Funktsioon.UuendatudSalvestamine();
                 }
+                else if (valik == "12")
+                {
+                    OSA4Funktsioon.RestoranMenüü();
+                }
                 else if (valik == "0")
                 {
                     Console.WriteLine("Nägemist!");
@@ -80,7 +85,7 @@ namespace Naidis_IKTpv_1TAR._4OSAFunktsioon
                 }
                 else
                 {
-                    Console.WriteLine("Palun vali 0-11");
+                    Console.WriteLine("Palun vali 0-12");
                 }
             }
         }

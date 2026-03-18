@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace Naidis_IKTpv_1TAR._1OSAFunktsioon
 {
-    // Klass Arvutaja sisaldab staatilisi meetodeid matemaatiliste tehete jaoks
     public class Arvutaja
     {
         public static float Liida(float arv1, float arv2)
@@ -28,4 +25,3 @@ namespace Naidis_IKTpv_1TAR._1OSAFunktsioon
         }
     }
 }
-

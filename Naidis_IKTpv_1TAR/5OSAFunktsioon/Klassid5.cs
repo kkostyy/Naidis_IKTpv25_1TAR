@@ -1,10 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
 {
-    // ── Ülesanne 1 ──────────────────────────────────────────────
+    // Ülesanne 1
     public class Toode
     {
         public string Nimi;
@@ -21,10 +20,10 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
     {
         public string Nimi;
         public int Vanus;
-        public string Sugu;     // "M" või "N"
-        public double Pikkus;   // cm
-        public double Kaal;     // kg
-        public int Aktiivsustase; // 1-5
+        public string Sugu;
+        public double Pikkus;
+        public double Kaal;
+        public int Aktiivsustase;
 
         public Inimene(string nimi, int vanus, string sugu, double pikkus, double kaal, int aktiivsustase)
         {
@@ -51,7 +50,7 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
         }
     }
 
-    // ── Ülesanne 3 ──────────────────────────────────────────────
+    // Ülesanne 3
     public class Opilane
     {
         public string Nimi;
@@ -67,12 +66,13 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
         {
             if (Hinded.Count == 0) return 0;
             double summa = 0;
-            foreach (int h in Hinded) summa += h;
+            foreach (int h in Hinded)
+                summa += h;
             return summa / Hinded.Count;
         }
     }
 
-    // ── Ülesanne 4 ──────────────────────────────────────────────
+    // Ülesanne 4
     public class Film
     {
         public string Pealkiri;
@@ -87,7 +87,7 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
         }
     }
 
-    // ── Ülesanne 6 ──────────────────────────────────────────────
+    // Ülesanne 6
     public class Lemmikloom
     {
         public string Nimi;
@@ -102,7 +102,7 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
         }
     }
 
-    // ── Ülesanne 7 ──────────────────────────────────────────────
+    // Ülesanne 7
     public class Valuuta
     {
         public string Nimetus;

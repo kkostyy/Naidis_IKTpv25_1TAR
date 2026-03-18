@@ -268,12 +268,12 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
         {
             List<Film> filmid = new List<Film>
             {
-                new Film("Inception",      2010, "sci-fi"),
-                new Film("The Godfather",  1972, "draam"),
-                new Film("The Dark Knight",2008, "action"),
-                new Film("Interstellar",   2014, "sci-fi"),
-                new Film("Pulp Fiction",   1994, "draam"),
-                new Film("Arrival",        2016, "sci-fi")
+                new Film("Inception",2010,"sci-fi"),
+                new Film("The Godfather",1972,"draam"),
+                new Film("The Dark Knight",2008,"action"),
+                new Film("Interstellar",2014,"sci-fi"),
+                new Film("Pulp Fiction",1994,"draam"),
+                new Film("Arrival",2016,"sci-fi")
             };
 
             Console.Write("Otsi zanri jargi (sci-fi / draam / action): ");
@@ -338,9 +338,9 @@ namespace Naidis_IKTpv_1TAR._5OSAFunktsioon
                 if (a > keskmine)
                     suuremaid++;
 
-            Console.WriteLine("Max:      " + max);
-            Console.WriteLine("Min:      " + min);
-            Console.WriteLine("Summa:    " + summa);
+            Console.WriteLine("Max: " + max);
+            Console.WriteLine("Min: " + min);
+            Console.WriteLine("Summa: " + summa);
             Console.WriteLine("Keskmine: " + Math.Round(keskmine, 2));
             Console.WriteLine("Keskmisest suuremaid: " + suuremaid);
 
